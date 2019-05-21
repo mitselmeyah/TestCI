@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20190521 16:18:43.507">
+<suite id="s1" name="testCI" source="C:\Users\Fligno-130\Desktop\testCI\testCI.robot">
+<kw name="Open Browser" library="Selenium2Library" type="setup">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${homepage}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190521 16:18:44.636" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20190521 16:18:44.636" endtime="20190521 16:18:49.601"></status>
+</kw>
+<test id="s1-t1" name="Google devops and find amazon.com">
+<kw name="Go To" library="Selenium2Library" type="setup">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${homepage}</arg>
+</arguments>
+<msg timestamp="20190521 16:18:49.603" level="INFO">Opening url 'https://www.google.com/'</msg>
+<status status="PASS" starttime="20190521 16:18:49.602" endtime="20190521 16:18:50.118"></status>
+</kw>
+<kw name="Google and check results">
+<arguments>
+<arg>devops</arg>
+<arg>https://aws.amazon.com/devops/what-is-devops/</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${searchkey}</arg>
+</arguments>
+<msg timestamp="20190521 16:18:50.120" level="INFO">Typing text 'devops' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20190521 16:18:50.119" endtime="20190521 16:18:50.329"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" starttime="20190521 16:18:50.329" endtime="20190521 16:18:52.687"></status>
+</kw>
+<status status="PASS" starttime="20190521 16:18:50.118" endtime="20190521 16:18:52.688"></status>
+</kw>
+<tags>
+<tag>amazon</tag>
+<tag>devops</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20190521 16:18:49.601" endtime="20190521 16:18:52.690" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Google robot and find its web site">
+<kw name="Go To" library="Selenium2Library" type="setup">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${homepage}</arg>
+</arguments>
+<msg timestamp="20190521 16:18:52.696" level="INFO">Opening url 'https://www.google.com/'</msg>
+<status status="PASS" starttime="20190521 16:18:52.696" endtime="20190521 16:18:53.170"></status>
+</kw>
+<kw name="Google and check results">
+<arguments>
+<arg>robot framework</arg>
+<arg>https://robotframework.org/</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${searchkey}</arg>
+</arguments>
+<msg timestamp="20190521 16:18:53.172" level="INFO">Typing text 'robot framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20190521 16:18:53.171" endtime="20190521 16:18:53.485"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" starttime="20190521 16:18:53.485" endtime="20190521 16:18:54.575"></status>
+</kw>
+<status status="PASS" starttime="20190521 16:18:53.171" endtime="20190521 16:18:54.575"></status>
+</kw>
+<tags>
+<tag>robot</tag>
+</tags>
+<status status="PASS" starttime="20190521 16:18:52.695" endtime="20190521 16:18:54.576" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20190521 16:18:54.579" endtime="20190521 16:18:56.887"></status>
+</kw>
+<doc>test CI</doc>
+<status status="PASS" starttime="20190521 16:18:43.511" endtime="20190521 16:18:56.887"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">amazon</stat>
+<stat pass="1" fail="0">devops</stat>
+<stat pass="1" fail="0">robot</stat>
+<stat pass="1" fail="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="testCI">testCI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
